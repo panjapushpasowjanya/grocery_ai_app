@@ -1,0 +1,246 @@
+/* Main Container Base */
+#healthPage {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f8fafc;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #202124;
+}
+
+/* 1. Header & Section Cards Styling */
+#healthPage h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a73e8; /* Google Fit Accent Blue */
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e8eaed;
+    padding-bottom: 8px;
+}
+
+.health-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(60,64,67,0.12), 0 1px 2px rgba(60,64,67,0.24);
+    border: 1px solid #e8eaed;
+}
+
+/* Fitness Setup Card Alignments */
+.profile-setup-card h4 {
+    margin: 0 0 16px 0;
+    font-size: 16px;
+    color: #3c4043;
+}
+
+.profile-inputs-grid {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.input-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.input-box label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #5f6368;
+}
+
+.input-box input, .input-box select {
+    padding: 10px 12px;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    background-color: #fff;
+    transition: border-color 0.2s;
+}
+
+.input-box input:focus, .input-box select:focus {
+    border-color: #1a73e8;
+}
+
+/* Goals Row Horizontal Setup */
+.goals-targets-row {
+    display: flex;
+    justify-content: space-between;
+    background: #f1f3f4;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #3c4043;
+}
+
+/* 2. Calorie Accounting Bar (Balanced Baseline Asset) */
+.net-calories-card {
+    background: #ffffff;
+}
+
+.net-stats-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.net-stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.net-val {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.eating-color { color: #f25c54; }
+.burning-color { color: #1a73e8; }
+.status-neutral { color: #1c1b1f; }
+
+.net-lbl {
+    font-size: 12px;
+    color: #5f6368;
+    margin-top: 4px;
+}
+
+.net-operator {
+    font-size: 20px;
+    color: #9ca3af;
+    font-weight: bold;
+}
+
+.status-banner-text {
+    margin: 8px 0 0 0;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 13px;
+    text-align: center;
+    font-weight: 500;
+}
+
+
+/* 3. Metric Progress Grid (Fixes the tall stacked layout) */
+.fitness-metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.metric-progress-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 1px 2px rgba(60,64,67,0.15);
+    border: 1px solid #e8eaed;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.card-header-icon {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.metric-numbers {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+    margin-bottom: 12px;
+}
+
+.metric-numbers h4 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+    color: #202124;
+    line-height: 1;
+}
+
+.metric-numbers p {
+    margin: 0;
+    font-size: 13px;
+    color: #5f6368;
+}
+
+/* Premium Google Progress Bars */
+.progress-bar-container {
+    width: 100%;
+    height: 8px;
+    background-color: #e8eaed;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Custom Color Schemes matching Google Fit API */
+.color-steps { color: #00796b; }
+.color-steps-bg { background-color: #00796b; }
+
+.color-heart { color: #d93025; }
+.color-heart-bg { background-color: #d93025; }
+
+.color-minutes { color: #1a73e8; }
+.color-minutes-bg { background-color: #1a73e8; }
+
+.color-distance { color: #e100ff; }
+.color-distance-bg { background-color: #e100ff; }
+
+
+/* 4. Live Simulator Panel Adjustments */
+.simulation-panel h4 {
+    margin: 0 0 12px 0;
+    font-size: 15px;
+    color: #3c4043;
+}
+
+.simulator-controls-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn-sim {
+    flex: 1;
+    min-width: 130px;
+    padding: 10px 14px;
+    border: 1px solid #dadce0;
+    background: #fff;
+    border-radius: 24px; /* Pill Shape */
+    font-size: 13px;
+    font-weight: 500;
+    color: #3c4043;
+    cursor: pointer;
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.btn-sim:hover {
+    background-color: #f1f3f4;
+    box-shadow: 0 1px 2px rgba(60,64,67,0.1);
+}
+
+.food-sim-btn {
+    background-color: #fef7e0;
+    border-color: #ffe0b2;
+    color: #b06000;
+}
+
+.food-sim-btn:hover {
+    background-color: #fedfc3;
+}
